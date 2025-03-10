@@ -235,6 +235,7 @@ void ReadFile(Creature creatures[], Creature *pCreatures[], int &creaturesCount)
 
             stream >> name >> type >> health >> strength;
             for (int i = 0; i < name.size(); ++i) if (name[i] == '_') name[i] = ' ';
+            stream.ignore(std::numeric_limits<int>::max(), '\n');
 
             creatures[creaturesCount].SetCreature(name, type, health, strength);
             ++creaturesCount;
@@ -548,3 +549,391 @@ void DisplaySortSubMenu() {
         "\n\t5. None: Go back to outer menu\n\n";
 
 }
+
+
+
+//TestCases
+//Input:
+
+//TC1: Print function
+
+//Output:
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 1
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Centaur         | Animal          |         50 |        125 |
+// | Kitty           | Animal          |         75 |        120 |
+// | Walrus          | Animal          |        125 |        145 |
+// | Elephant        | Animal          |         54 |         63 |
+// | Tiger           | Animal          |         75 |        131 |
+// | Squirrel        | Animal          |        119 |         52 |
+// | Mouse           | Animal          |        121 |         89 |
+// | Spider          | Animal          |        175 |         39 |
+// | Lizard          | Animal          |        164 |        101 |
+// | Unicorn         | Myth            |        205 |        227 |
+// | Goat            | Animal          |        131 |        165 |
+// | Rainman         | Human           |        121 |        177 |
+// | Desert Scorcher | Human           |        167 |        125 |
+// | Magic Caster    | Human           |        131 |        155 |
+// | Honey Boo Boo   | Human           |        290 |         53 |
+// | Spongebob       | Animal          |        303 |          5 |
+// | Jimmy Neutron   | Human           |         85 |        305 |
+// | Wolf            | Animal          |        173 |        219 |
+// | Animal Pocher   | Human           |         75 |        201 |
+// | Fanboy          | Human           |         91 |         35 |
+// | Paimon          | Legend          |        205 |        370 |
+// | Pikachu         | Animal          |         83 |        311 |
+// | Peter Griffin   | Human           |         21 |        150 |
+// | Veggietales     | Myth            |         10 |         15 |
+// | Paw Patrol      | Animal          |        183 |         31 |
+// -----------------------------------------------------------------
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 2
+
+
+// Sort Options:
+//         1. Name
+//         2. Type
+//         3. Health
+//         4. Strength
+//         5. None: Go back to outer menu
+
+// 1
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Wolf            | Animal          |        173 |        219 |
+// | Walrus          | Animal          |        125 |        145 |
+// | Veggietales     | Myth            |         10 |         15 |
+// | Unicorn         | Myth            |        205 |        227 |
+// | Tiger           | Animal          |         75 |        131 |
+// | Squirrel        | Animal          |        119 |         52 |
+// | Spongebob       | Animal          |        303 |          5 |
+// | Spider          | Animal          |        175 |         39 |
+// | Rainman         | Human           |        121 |        177 |
+// | Pikachu         | Animal          |         83 |        311 |
+// | Peter Griffin   | Human           |         21 |        150 |
+// | Paw Patrol      | Animal          |        183 |         31 |
+// | Paimon          | Legend          |        205 |        370 |
+// | Mouse           | Animal          |        121 |         89 |
+// | Magic Caster    | Human           |        131 |        155 |
+// | Lizard          | Animal          |        164 |        101 |
+// | Kitty           | Animal          |         75 |        120 |
+// | Jimmy Neutron   | Human           |         85 |        305 |
+// | Honey Boo Boo   | Human           |        290 |         53 |
+// | Goat            | Animal          |        131 |        165 |
+// | Fanboy          | Human           |         91 |         35 |
+// | Elephant        | Animal          |         54 |         63 |
+// | Desert Scorcher | Human           |        167 |        125 |
+// | Centaur         | Animal          |         50 |        125 |
+// | Animal Pocher   | Human           |         75 |        201 |
+// -----------------------------------------------------------------
+
+
+
+// Sort Options:
+//         1. Name
+//         2. Type
+//         3. Health
+//         4. Strength
+//         5. None: Go back to outer menu
+
+// 2
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Veggietales     | Myth            |         10 |         15 |
+// | Unicorn         | Myth            |        205 |        227 |
+// | Paimon          | Legend          |        205 |        370 |
+// | Rainman         | Human           |        121 |        177 |
+// | Peter Griffin   | Human           |         21 |        150 |
+// | Magic Caster    | Human           |        131 |        155 |
+// | Jimmy Neutron   | Human           |         85 |        305 |
+// | Honey Boo Boo   | Human           |        290 |         53 |
+// | Fanboy          | Human           |         91 |         35 |
+// | Desert Scorcher | Human           |        167 |        125 |
+// | Animal Pocher   | Human           |         75 |        201 |
+// | Wolf            | Animal          |        173 |        219 |
+// | Walrus          | Animal          |        125 |        145 |
+// | Tiger           | Animal          |         75 |        131 |
+// | Squirrel        | Animal          |        119 |         52 |
+// | Spongebob       | Animal          |        303 |          5 |
+// | Spider          | Animal          |        175 |         39 |
+// | Pikachu         | Animal          |         83 |        311 |
+// | Paw Patrol      | Animal          |        183 |         31 |
+// | Mouse           | Animal          |        121 |         89 |
+// | Lizard          | Animal          |        164 |        101 |
+// | Kitty           | Animal          |         75 |        120 |
+// | Goat            | Animal          |        131 |        165 |
+// | Elephant        | Animal          |         54 |         63 |
+// | Centaur         | Animal          |         50 |        125 |
+// -----------------------------------------------------------------
+
+
+
+// Sort Options:
+//         1. Name
+//         2. Type
+//         3. Health
+//         4. Strength
+//         5. None: Go back to outer menu
+
+// 3
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Spongebob       | Animal          |        303 |          5 |
+// | Honey Boo Boo   | Human           |        290 |         53 |
+// | Unicorn         | Myth            |        205 |        227 |
+// | Paimon          | Legend          |        205 |        370 |
+// | Paw Patrol      | Animal          |        183 |         31 |
+// | Spider          | Animal          |        175 |         39 |
+// | Wolf            | Animal          |        173 |        219 |
+// | Desert Scorcher | Human           |        167 |        125 |
+// | Lizard          | Animal          |        164 |        101 |
+// | Magic Caster    | Human           |        131 |        155 |
+// | Goat            | Animal          |        131 |        165 |
+// | Walrus          | Animal          |        125 |        145 |
+// | Rainman         | Human           |        121 |        177 |
+// | Mouse           | Animal          |        121 |         89 |
+// | Squirrel        | Animal          |        119 |         52 |
+// | Fanboy          | Human           |         91 |         35 |
+// | Jimmy Neutron   | Human           |         85 |        305 |
+// | Pikachu         | Animal          |         83 |        311 |
+// | Animal Pocher   | Human           |         75 |        201 |
+// | Tiger           | Animal          |         75 |        131 |
+// | Kitty           | Animal          |         75 |        120 |
+// | Elephant        | Animal          |         54 |         63 |
+// | Centaur         | Animal          |         50 |        125 |
+// | Peter Griffin   | Human           |         21 |        150 |
+// | Veggietales     | Myth            |         10 |         15 |
+// -----------------------------------------------------------------
+
+
+
+// Sort Options:
+//         1. Name
+//         2. Type
+//         3. Health
+//         4. Strength
+//         5. None: Go back to outer menu
+
+// 4
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Paimon          | Legend          |        205 |        370 |
+// | Pikachu         | Animal          |         83 |        311 |
+// | Jimmy Neutron   | Human           |         85 |        305 |
+// | Unicorn         | Myth            |        205 |        227 |
+// | Wolf            | Animal          |        173 |        219 |
+// | Animal Pocher   | Human           |         75 |        201 |
+// | Rainman         | Human           |        121 |        177 |
+// | Goat            | Animal          |        131 |        165 |
+// | Magic Caster    | Human           |        131 |        155 |
+// | Peter Griffin   | Human           |         21 |        150 |
+// | Walrus          | Animal          |        125 |        145 |
+// | Tiger           | Animal          |         75 |        131 |
+// | Desert Scorcher | Human           |        167 |        125 |
+// | Centaur         | Animal          |         50 |        125 |
+// | Kitty           | Animal          |         75 |        120 |
+// | Lizard          | Animal          |        164 |        101 |
+// | Mouse           | Animal          |        121 |         89 |
+// | Elephant        | Animal          |         54 |         63 |
+// | Honey Boo Boo   | Human           |        290 |         53 |
+// | Squirrel        | Animal          |        119 |         52 |
+// | Spider          | Animal          |        175 |         39 |
+// | Fanboy          | Human           |         91 |         35 |
+// | Paw Patrol      | Animal          |        183 |         31 |
+// | Veggietales     | Myth            |         10 |         15 |
+// | Spongebob       | Animal          |        303 |          5 |
+// -----------------------------------------------------------------
+
+
+
+// Sort Options:
+//         1. Name
+//         2. Type
+//         3. Health
+//         4. Strength
+//         5. None: Go back to outer menu
+
+// 5
+// Leaving sub-menu
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 3
+
+// Enter search query:
+
+// Veggieta
+
+// Entries Found:
+
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Veggietales     | Myth            |         10 |         15 |
+
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 3
+
+// Enter search query:
+
+// VEGGIe
+
+// Entries Found:
+
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Veggietales     | Myth            |         10 |         15 |
+
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 3
+
+// Enter search query:
+
+// PAW
+
+// Entries Found:
+
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Paw Patrol      | Animal          |        183 |         31 |
+
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 3
+
+// Enter search query:
+
+// patr
+
+// Entries Found:
+
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Paw Patrol      | Animal          |        183 |         31 |
+
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 3
+
+// Enter search query:
+
+// MyTH
+
+// Entries Found:
+
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Unicorn         | Myth            |        205 |        227 |
+// | Veggietales     | Myth            |         10 |         15 |
+
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 3
+
+// Enter search query:
+
+// y
+
+// Entries Found:
+
+
+
+// | Name            | Type            | Health     | Strength   |
+// -----------------------------------------------------------------
+// | Kitty           | Animal          |         75 |        120 |
+// | Unicorn         | Myth            |        205 |        227 |
+// | Honey Boo Boo   | Human           |        290 |         53 |
+// | Jimmy Neutron   | Human           |         85 |        305 |
+// | Fanboy          | Human           |         91 |         35 |
+// | Veggietales     | Myth            |         10 |         15 |
+
+
+
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+// 4
+// Program now closed.
