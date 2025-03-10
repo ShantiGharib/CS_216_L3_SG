@@ -69,8 +69,7 @@ void HandleDefaultMenuCase();
 
 static constexpr const int CREATURE_SIZE_MAX{25}, HEADING_WIDTH{65};
 
-//static const std::string INPUT_FILE{"in_creatures.txt"};
-static const std::string INPUT_FILE{"C:\\Users\\Shanti\\Desktop\\New Text Document.txt"};
+static const std::string INPUT_FILE{"in_creatures.txt"};
 
 
 int main() {
