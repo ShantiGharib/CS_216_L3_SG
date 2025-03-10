@@ -43,6 +43,11 @@ public:
 };
 
 
+
+
+
+
+
 void PrintArrayOfCreatures(Creature *creatures[], const int &creaturesCount);
 void      PrintArrayHeader();
 void   PrintSeparationLine(int width);
