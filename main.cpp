@@ -214,6 +214,10 @@ std::string Creature::ToString() const {
 }
 
 
+
+
+
+
 void ReadFile(Creature creatures[], Creature *pCreatures[], int &creaturesCount) {
 
     
