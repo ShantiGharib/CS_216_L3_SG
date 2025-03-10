@@ -31,11 +31,11 @@ public:
     
     };
     
-    inline int GetHealth();
-    inline int GetStrength();
+    inline int GetHealth() const;
+    inline int GetStrength() const;
 
-    inline const std::string &GetType();
-    inline const std::string &GetName();
+    inline const std::string &GetType() const;
+    inline const std::string &GetName() const;
     std::string ToString() const;
 
     void SetCreature(const std::string &creatureName, const std::string &creatureType, int health, int strength);
@@ -160,25 +160,25 @@ int main() {
 
 
 
-inline int Creature::GetHealth() {
+inline int Creature::GetHealth() const {
     
     return health;
 
 }
 
-inline int Creature::GetStrength() {
+inline int Creature::GetStrength() const {
 
     return strength;
 
 }
 
-inline const std::string & Creature::GetType() {
+inline const std::string & Creature::GetType() const {
 
     return type;
 
 }
 
-inline const std::string & Creature::GetName() {
+inline const std::string & Creature::GetName() const {
 
     return name;
 
