@@ -554,8 +554,33 @@ void DisplaySortSubMenu() {
 
 //TestCases
 //Input:
+// Centaur                      Animal  50 125 
+// Kitty                        Animal  75 120     
+// Walrus                       Animal  125 145 
+// Elephant                     Animal  54 63  
+// Tiger                        Animal  75 131    
+// Squirrel                     Animal  119 52 
+// Mouse                        Animal  121 89  
+// Spider                       Animal  175 39    
+// Lizard                       Animal  164 101   
+// Unicorn                      Myth    205 227    
+// Goat                         Animal  131 165     
+// Rainman                      Human   121 177 
+// Desert_Scorcher              Human   167 125 
+// Magic_Caster                 Human   131 155    
+// Honey_Boo_Boo                Human   290 53  
+// Spongebob                    Animal  303 05        
+// Jimmy_Neutron                Human   85 305  
+// Wolf                         Animal  173 219  
+// Animal_Pocher                Human   75 201   
+// Fanboy                       Human   91   35    
+// Paimon                       Legend  205 370   
+// Pikachu                      Animal  83  311    
+// Peter_Griffin                Human   21  150    
+// Veggietales                  Myth    10 15
+// Paw_Patrol                   Animal  183 31
 
-//TC1: Print function
+//TC1: Print function original Order
 
 //Output:
 
@@ -598,7 +623,10 @@ void DisplaySortSubMenu() {
 // | Paw Patrol      | Animal          |        183 |         31 |
 // -----------------------------------------------------------------
 
+//-------------------------------------------------------------------------
 
+//TC2: Sort Function: By name descending order
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -648,7 +676,10 @@ void DisplaySortSubMenu() {
 // | Animal Pocher   | Human           |         75 |        201 |
 // -----------------------------------------------------------------
 
+//--------------------------------------------------------------------------
 
+//TC3: Sort Function: by Type descending order
+//Output:
 
 // Sort Options:
 //         1. Name
@@ -689,7 +720,10 @@ void DisplaySortSubMenu() {
 // | Centaur         | Animal          |         50 |        125 |
 // -----------------------------------------------------------------
 
+//------------------------------------------------------------------------
 
+//TC4: Sort Function: by Health descending order
+//Output:
 
 // Sort Options:
 //         1. Name
@@ -730,7 +764,10 @@ void DisplaySortSubMenu() {
 // | Veggietales     | Myth            |         10 |         15 |
 // -----------------------------------------------------------------
 
+//--------------------------------------------------------------------------
 
+//TC5: Sort Function: by Strength descending order
+//Output:
 
 // Sort Options:
 //         1. Name
@@ -771,7 +808,10 @@ void DisplaySortSubMenu() {
 // | Spongebob       | Animal          |        303 |          5 |
 // -----------------------------------------------------------------
 
+//----------------------------------------------------------------------
 
+//TC6: Sort Function: Ability to leave Sort Function sub menu
+//Output:
 
 // Sort Options:
 //         1. Name
@@ -784,6 +824,17 @@ void DisplaySortSubMenu() {
 // Leaving sub-menu
 
 
+
+// Options:
+//         1. Print creatures
+//         2. Sort creatures
+//         3. Search creatures
+//         4. Quit
+
+//-----------------------------------------
+
+//TC7: Search Function: regular input
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -806,7 +857,11 @@ void DisplaySortSubMenu() {
 // | Veggietales     | Myth            |         10 |         15 |
 
 
+//---------------------------------------------------------------------------
 
+
+//TC8: Search Function: mixed alpha and non-alpha characters
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -828,8 +883,10 @@ void DisplaySortSubMenu() {
 // -----------------------------------------------------------------
 // | Veggietales     | Myth            |         10 |         15 |
 
+//--------------------------------------------------------------------------
 
-
+//TC9: Search Function: All Caps
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -851,8 +908,10 @@ void DisplaySortSubMenu() {
 // -----------------------------------------------------------------
 // | Paw Patrol      | Animal          |        183 |         31 |
 
+//--------------------------------------------------------------------------
 
-
+//TC10: Search Function: expressions that match the middle or end of elements
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -874,8 +933,10 @@ void DisplaySortSubMenu() {
 // -----------------------------------------------------------------
 // | Paw Patrol      | Animal          |        183 |         31 |
 
+//-------------------------------------------------------------------------
 
-
+//TC11: Search Function: searching for types-mixed alpha and non-alpha characters
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -898,8 +959,10 @@ void DisplaySortSubMenu() {
 // | Unicorn         | Myth            |        205 |        227 |
 // | Veggietales     | Myth            |         10 |         15 |
 
+//-----------------------------------------------------------------------
 
-
+//TC12: Search Function: single character
+//Output:
 
 // Options:
 //         1. Print creatures
@@ -927,7 +990,10 @@ void DisplaySortSubMenu() {
 // | Veggietales     | Myth            |         10 |         15 |
 
 
+//--------------------------------------------------------------------------
 
+//TC13: Quiting program
+//Output:
 
 // Options:
 //         1. Print creatures
